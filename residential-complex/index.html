@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Современный жилой комплекс с развитой инфраструктурой. Квартиры от застройщика. Виртуальные туры, планировки, цены.">
+    <meta name="keywords" content="жилой комплекс, квартиры, недвижимость, жилье, новостройка">
+    <meta name="author" content="Residential Complex">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Жилой Комплекс - Современное жилье вашей мечты">
+    <meta property="og:description" content="Современный жилой комплекс с развитой инфраструктурой">
+    <meta property="og:type" content="website">
+    
+    <title>Жилой Комплекс | Современное жилье вашей мечты</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#home">
+                        <span class="logo-icon">🏢</span>
+                        <span class="logo-text">ЖК "Панорама"</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link active">Главная</a></li>
+                    <li><a href="#realty" class="nav-link">Недвижимость</a></li>
+                    <li><a href="#infrastructure" class="nav-link">Инфраструктура</a></li>
+                    <li><a href="#about" class="nav-link">О компании</a></li>
+                    <li><a href="#news" class="nav-link">Новости</a></li>
+                    <li><a href="#contacts" class="nav-link">Контакты</a></li>
+                    <li><a href="#login" class="btn-login">Личный кабинет</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Жилой комплекс "Панорама"</h1>
+            <p class="hero-subtitle">Современное жилье в центре городской жизни</p>
+            <div class="hero-buttons">
+                <a href="#realty" class="btn btn-primary">Выбрать квартиру</a>
+                <a href="#virtual-tour" class="btn btn-secondary">Виртуальный тур</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">12</span>
+                    <span class="stat-label">домов</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">850</span>
+                    <span class="stat-label">квартир</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">25</span>
+                    <span class="stat-label">этажей</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Complex Section -->
+    <section class="about-complex section" id="about-complex">
+        <div class="container">
+            <h2>О жилом комплексе</h2>
+            <div class="about-grid">
+                <div class="about-content">
+                    <p>Жилой комплекс "Панорама" — это современный квартал комфорт-класса, расположенный в престижном районе города. Мы создали пространство для жизни, где каждая деталь продумана для вашего удобства.</p>
+                    <p>Архитектурная концепция комплекса сочетает в себе современные технологии строительства и элегантный дизайн. Панорамные окна, высокие потолки, качественные материалы — всё для вашего комфорта.</p>
+                    <ul class="features-list">
+                        <li>✓ Закрытая территория с видеонаблюдением</li>
+                        <li>✓ Подземный паркинг</li>
+                        <li>✓ Детские площадки и спортивные зоны</li>
+                        <li>✓ Ландшафтный дизайн</li>
+                        <li>✓ Консьерж-сервис 24/7</li>
+                    </ul>
+                </div>
+                <div class="about-images">
+                    <div class="image-gallery">
+                        <img src="images/complex-1.jpg" alt="Жилой комплекс Панорама вид снаружи" class="gallery-img">
+                        <img src="images/complex-2.jpg" alt="Двор жилого комплекса" class="gallery-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Realty Section -->
+    <section class="realty section" id="realty">
+        <div class="container">
+            <h2>Недвижимость</h2>
+            <p class="section-subtitle">Выберите квартиру своей мечты</p>
+            
+            <!-- Search Filter -->
+            <div class="search-filter">
+                <form class="filter-form" id="propertyFilter">
+                    <div class="filter-group">
+                        <label for="rooms">Комнатность:</label>
+                        <select id="rooms" name="rooms">
+                            <option value="">Все</option>
+                            <option value="1">1-комнатная</option>
+                            <option value="2">2-комнатная</option>
+                            <option value="3">3-комнатная</option>
+                            <option value="4">4-комнатная</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="area-min">Площадь от (м²):</label>
+                        <input type="number" id="area-min" name="area-min" placeholder="30">
+                    </div>
+                    <div class="filter-group">
+                        <label for="area-max">Площадь до (м²):</label>
+                        <input type="number" id="area-max" name="area-max" placeholder="150">
+                    </div>
+                    <div class="filter-group">
+                        <label for="price-min">Цена от (₽):</label>
+                        <input type="number" id="price-min" name="price-min" placeholder="3000000">
+                    </div>
+                    <div class="filter-group">
+                        <label for="price-max">Цена до (₽):</label>
+                        <input type="number" id="price-max" name="price-max" placeholder="15000000">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Найти</button>
+                </form>
+            </div>
+
+            <!-- Properties Grid -->
+            <div class="properties-grid" id="propertiesGrid">
+                <!-- Property Card 1 -->
+                <div class="property-card" data-rooms="1" data-area="45" data-price="4500000">
+                    <div class="property-image">
+                        <img src="images/apt-1.jpg" alt="1-комнатная квартира 45 м²">
+                        <div class="property-badge">В продаже</div>
+                    </div>
+                    <div class="property-info">
+                        <h3>1-комнатная квартира</h3>
+                        <p class="property-area">45 м²</p>
+                        <p class="property-price">4 500 000 ₽</p>
+                        <div class="property-features">
+                            <span>Этаж 12</span>
+                            <span>Корпус А</span>
+                        </div>
+                        <button class="btn btn-outline view-plan">Планировка</button>
+                        <button class="btn btn-primary schedule-view">Записаться на просмотр</button>
+                    </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div class="property-card" data-rooms="2" data-area="68" data-price="7200000">
+                    <div class="property-image">
+                        <img src="images/apt-2.jpg" alt="2-комнатная квартира 68 м²">
+                        <div class="property-badge new">Новинка</div>
+                    </div>
+                    <div class="property-info">
+                        <h3>2-комнатная квартира</h3>
+                        <p class="property-area">68 м²</p>
+                        <p class="property-price">7 200 000 ₽</p>
+                        <div class="property-features">
+                            <span>Этаж 8</span>
+                            <span>Корпус Б</span>
+                        </div>
+                        <button class="btn btn-outline view-plan">Планировка</button>
+                        <button class="btn btn-primary schedule-view">Записаться на просмотр</button>
+                    </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div class="property-card" data-rooms="3" data-area="95" data-price="10500000">
+                    <div class="property-image">
+                        <img src="images/apt-3.jpg" alt="3-комнатная квартира 95 м²">
+                    </div>
+                    <div class="property-info">
+                        <h3>3-комнатная квартира</h3>
+                        <p class="property-area">95 м²</p>
+                        <p class="property-price">10 500 000 ₽</p>
+                        <div class="property-features">
+                            <span>Этаж 15</span>
+                            <span>Корпус А</span>
+                        </div>
+                        <button class="btn btn-outline view-plan">Планировка</button>
+                        <button class="btn btn-primary schedule-view">Записаться на просмотр</button>
+                    </div>
+                </div>
+
+                <!-- Property Card 4 -->
+                <div class="property-card" data-rooms="2" data-area="72" data-price="7800000">
+                    <div class="property-image">
+                        <img src="images/apt-4.jpg" alt="2-комнатная квартира 72 м²">
+                        <div class="property-badge popular">Популярная</div>
+                    </div>
+                    <div class="property-info">
+                        <h3>2-комнатная квартира</h3>
+                        <p class="property-area">72 м²</p>
+                        <p class="property-price">7 800 000 ₽</p>
+                        <div class="property-features">
+                            <span>Этаж 20</span>
+                            <span>Корпус В</span>
+                        </div>
+                        <button class="btn btn-outline view-plan">Планировка</button>
+                        <button class="btn btn-primary schedule-view">Записаться на просмотр</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section class="infrastructure section" id="infrastructure">
+        <div class="container">
+            <h2>Инфраструктура</h2>
+            <p class="section-subtitle">Всё необходимое рядом с домом</p>
+            
+            <div class="infrastructure-grid">
+                <div class="infra-item">
+                    <div class="infra-icon">🎓</div>
+                    <h3>Образование</h3>
+                    <p>Школы и детские сады в шаговой доступности</p>
+                    <ul>
+                        <li>Школа №45 — 300м</li>
+                        <li>Детский сад "Солнышко" — 200м</li>
+                        <li>Частная гимназия — 500м</li>
+                    </ul>
+                </div>
+                
+                <div class="infra-item">
+                    <div class="infra-icon">🛒</div>
+                    <h3>Торговля</h3>
+                    <p>Магазины и торговые центры</p>
+                    <ul>
+                        <li>Супермаркет "Перекрёсток" — 150м</li>
+                        <li>ТЦ "Галерея" — 800м</li>
+                        <li>Рынок свежих продуктов — 400м</li>
+                    </ul>
+                </div>
+                
+                <div class="infra-item">
+                    <div class="infra-icon">🌳</div>
+                    <h3>Отдых</h3>
+                    <p>Парки и зоны отдыха</p>
+                    <ul>
+                        <li>Городской парк — 600м</li>
+                        <li>Набережная — 1км</li>
+                        <li>Сквер у дома — 100м</li>
+                    </ul>
+                </div>
+                
+                <div class="infra-item">
+                    <div class="infra-icon">🏥</div>
+                    <h3>Здоровье</h3>
+                    <p>Медицинские учреждения</p>
+                    <ul>
+                        <li>Поликлиника №12 — 500м</li>
+                        <li>Стоматология — 250м</li>
+                        <li>Фитнес-центр — 300м</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <div id="map" class="map-placeholder">
+                    <p>Интерактивная карта загружается...</p>
+                    <p class="map-note">Здесь будет интегрирована Яндекс.Карта или Google Maps</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Tour Section -->
+    <section class="virtual-tour section" id="virtual-tour">
+        <div class="container">
+            <h2>Виртуальный тур</h2>
+            <p class="section-subtitle">Прогуляйтесь по комплексу не выходя из дома</p>
+            
+            <div class="tour-container">
+                <div class="tour-viewer" id="tourViewer">
+                    <img src="images/virtual-tour-placeholder.jpg" alt="Виртуальный тур" class="tour-image">
+                    <div class="tour-controls">
+                        <button class="tour-btn" id="tourPrev">← Назад</button>
+                        <button class="tour-btn" id="tourNext">Вперёд →</button>
+                    </div>
+                </div>
+                <div class="tour-thumbnails">
+                    <img src="images/tour-thumb-1.jpg" alt="Холл" class="tour-thumb active">
+                    <img src="images/tour-thumb-2.jpg" alt="Двор" class="tour-thumb">
+                    <img src="images/tour-thumb-3.jpg" alt="Паркинг" class="tour-thumb">
+                    <img src="images/tour-thumb-4.jpg" alt="Спортзал" class="tour-thumb">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Company Section -->
+    <section class="about-company section" id="about">
+        <div class="container">
+            <h2>О компании</h2>
+            
+            <div class="company-content">
+                <div class="company-info">
+                    <h3>Застройщик "СтройИнвестГрупп"</h3>
+                    <p>Компания "СтройИнвестГрупп" работает на рынке недвижимости с 2005 года. За это время мы построили более 50 жилых комплексов общей площадью свыше 1 миллиона квадратных метров.</p>
+                    <p>Наша миссия — создавать комфортную среду для жизни, используя современные технологии и уделяя внимание каждой детали.</p>
+                    
+                    <div class="company-stats">
+                        <div class="c-stat">
+                            <span class="c-stat-num">18</span>
+                            <span class="c-stat-label">лет на рынке</span>
+                        </div>
+                        <div class="c-stat">
+                            <span class="c-stat-num">50+</span>
+                            <span class="c-stat-label">построенных объектов</span>
+                        </div>
+                        <div class="c-stat">
+                            <span class="c-stat-num">15000+</span>
+                            <span class="c-stat-label">довольных жильцов</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="company-docs">
+                    <h3>Лицензии и сертификаты</h3>
+                    <ul class="docs-list">
+                        <li>
+                            <a href="#" class="doc-item">
+                                <span class="doc-icon">📄</span>
+                                <span>Лицензия на строительство</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="doc-item">
+                                <span class="doc-icon">📜</span>
+                                <span>Сертификат ISO 9001</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="doc-item">
+                                <span class="doc-icon">🏆</span>
+                                <span>Награда "Лучший застройщик 2023"</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="doc-item">
+                                <span class="doc-icon">✅</span>
+                                <span>Разрешение на ввод в эксплуатацию</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news section" id="news">
+        <div class="container">
+            <h2>Новости и мероприятия</h2>
+            <p class="section-subtitle">Будьте в курсе событий жилого комплекса</p>
+            
+            <div class="news-grid">
+                <article class="news-card featured">
+                    <div class="news-image">
+                        <img src="images/news-1.jpg" alt="Открытие детской площадки">
+                        <span class="news-date">15 Декабря 2024</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>Открытие новой детской площадки</h3>
+                        <p>Приглашаем всех жителей на торжественное открытие обновлённой детской площадки во дворе корпуса А. Мероприятие состоится 20 декабря в 12:00.</p>
+                        <a href="#" class="read-more">Читать далее →</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/news-2.jpg" alt="График работы в праздники">
+                        <span class="news-date">10 Декабря 2024</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>График работы в новогодние праздники</h3>
+                        <p>Информируем об изменении графика работы управляющей компании в период новогодних каникул.</p>
+                        <a href="#" class="read-more">Читать далее →</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="images/news-3.jpg" alt="Собрание жильцов">
+                        <span class="news-date">5 Декабря 2024</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>Общее собрание жильцов</h3>
+                        <p>Уважаемые жильцы! Приглашаем вас принять участие в общем собрании собственников помещений.</p>
+                        <a href="#" class="read-more">Читать далее →</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="news-archive">
+                <a href="#" class="btn btn-outline">Архив новостей</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Form Section -->
+    <section class="feedback section" id="feedback">
+        <div class="container">
+            <h2>Обратная связь</h2>
+            <p class="section-subtitle">Есть вопросы? Мы готовы помочь!</p>
+            
+            <div class="feedback-wrapper">
+                <form class="feedback-form" id="feedbackForm">
+                    <div class="form-group">
+                        <label for="fb-name">Ваше имя *</label>
+                        <input type="text" id="fb-name" name="name" required placeholder="Иван Иванов">
+                    </div>
+                    <div class="form-group">
+                        <label for="fb-email">Email *</label>
+                        <input type="email" id="fb-email" name="email" required placeholder="example@mail.ru">
+                    </div>
+                    <div class="form-group">
+                        <label for="fb-phone">Телефон</label>
+                        <input type="tel" id="fb-phone" name="phone" placeholder="+7 (999) 000-00-00">
+                    </div>
+                    <div class="form-group">
+                        <label for="fb-subject">Тема обращения</label>
+                        <select id="fb-subject" name="subject">
+                            <option value="">Выберите тему</option>
+                            <option value="purchase">Покупка квартиры</option>
+                            <option value="viewing">Запись на просмотр</option>
+                            <option value="service">Вопрос по обслуживанию</option>
+                            <option value="complaint">Жалоба</option>
+                            <option value="suggestion">Предложение</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="fb-message">Сообщение *</label>
+                        <textarea id="fb-message" name="message" rows="5" required placeholder="Ваш вопрос или сообщение..."></textarea>
+                    </div>
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn btn-primary btn-large">Отправить сообщение</button>
+                    </div>
+                </form>
+
+                <div class="contact-info-side">
+                    <h3>Контактная информация</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <div>
+                            <strong>Адрес офиса продаж:</strong>
+                            <p>г. Москва, ул. Примерная, д. 10, офис 101</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <div>
+                            <strong>Телефон:</strong>
+                            <p>+7 (999) 000-00-00</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <div>
+                            <strong>Email:</strong>
+                            <p>info@panorama-residence.ru</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🕐</span>
+                        <div>
+                            <strong>Режим работы:</strong>
+                            <p>Пн-Пт: 9:00 - 20:00<br>Сб-Вс: 10:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts Section -->
+    <section class="contacts section" id="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            
+            <div class="contacts-wrapper">
+                <div class="office-locations">
+                    <div class="office-card">
+                        <h3>Офис продаж</h3>
+                        <p>📍 г. Москва, ул. Примерная, д. 10, офис 101</p>
+                        <p>📞 +7 (999) 000-00-00</p>
+                        <p>✉️ sales@panorama-residence.ru</p>
+                        <p>🕐 Пн-Вс: 9:00 - 20:00</p>
+                    </div>
+                    
+                    <div class="office-card">
+                        <h3>Управляющая компания</h3>
+                        <p>📍 г. Москва, ул. Примерная, д. 12, офис 5</p>
+                        <p>📞 +7 (999) 000-00-01</p>
+                        <p>✉️ support@panorama-residence.ru</p>
+                        <p>🕐 Пн-Пт: 9:00 - 18:00</p>
+                    </div>
+                    
+                    <div class="office-card">
+                        <h3>Аварийная служба</h3>
+                        <p>📞 +7 (999) 000-00-02</p>
+                        <p>🕐 Круглосуточно</p>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <h3>Мы в социальных сетях</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" aria-label="ВКонтакте">VK</a>
+                        <a href="#" class="social-icon" aria-label="Telegram">TG</a>
+                        <a href="#" class="social-icon" aria-label="WhatsApp">WA</a>
+                        <a href="#" class="social-icon" aria-label="YouTube">YT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <button class="modal-close" id="loginModalClose">&times;</button>
+            <h2>Личный кабинет жильца</h2>
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="login-email">Email или телефон</label>
+                    <input type="text" id="login-email" name="login" required placeholder="Введите email или телефон">
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Пароль</label>
+                    <input type="password" id="login-password" name="password" required placeholder="Введите пароль">
+                </div>
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" name="remember"> Запомнить меня
+                    </label>
+                    <a href="#" class="forgot-password">Забыли пароль?</a>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Войти</button>
+                <p class="register-link">Нет аккаунта? <a href="#">Зарегистрироваться</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Schedule View Modal -->
+    <div class="modal" id="scheduleModal">
+        <div class="modal-content">
+            <button class="modal-close" id="scheduleModalClose">&times;</button>
+            <h2>Запись на просмотр</h2>
+            <form class="schedule-form" id="scheduleForm">
+                <div class="form-group">
+                    <label for="sv-property">Интересующая квартира</label>
+                    <input type="text" id="sv-property" name="property" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="sv-name">Ваше имя *</label>
+                    <input type="text" id="sv-name" name="name" required placeholder="Иван Иванов">
+                </div>
+                <div class="form-group">
+                    <label for="sv-phone">Телефон *</label>
+                    <input type="tel" id="sv-phone" name="phone" required placeholder="+7 (999) 000-00-00">
+                </div>
+                <div class="form-group">
+                    <label for="sv-email">Email</label>
+                    <input type="email" id="sv-email" name="email" placeholder="example@mail.ru">
+                </div>
+                <div class="form-group">
+                    <label for="sv-date">Желаемая дата и время</label>
+                    <input type="datetime-local" id="sv-date" name="date">
+                </div>
+                <div class="form-group">
+                    <label for="sv-comment">Комментарий</label>
+                    <textarea id="sv-comment" name="comment" rows="3" placeholder="Дополнительная информация"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>ЖК "Панорама"</h4>
+                    <p>Современный жилой комплекс комфорт-класса в престижном районе города.</p>
+                    <div class="footer-logo">
+                        <span class="logo-icon">🏢</span>
+                        <span class="logo-text">Панорама</span>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <ul>
+                        <li><a href="#home">Главная</a></li>
+                        <li><a href="#realty">Недвижимость</a></li>
+                        <li><a href="#infrastructure">Инфраструктура</a></li>
+                        <li><a href="#about">О компании</a></li>
+                        <li><a href="#news">Новости</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li>📞 +7 (999) 000-00-00</li>
+                        <li>✉️ info@panorama-residence.ru</li>
+                        <li>📍 г. Москва, ул. Примерная, д. 10</li>
+                        <li>🕐 Пн-Вс: 9:00 - 20:00</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Документы</h4>
+                    <ul>
+                        <li><a href="#">Проектная декларация</a></li>
+                        <li><a href="#">Разрешение на строительство</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                        <li><a href="#">Пользовательское соглашение</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ЖК "Панорама". Все права защищены.</p>
+                <p>Сайт разработан для демонстрации. Не является публичной офертой.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
